@@ -13,6 +13,9 @@
 		0D64D5D627DFF33300E40CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D64D5D427DFF33300E40CCC /* Main.storyboard */; };
 		0D64D5D827DFF33400E40CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D64D5D727DFF33400E40CCC /* Assets.xcassets */; };
 		0D64D5DB27DFF33400E40CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D64D5D927DFF33400E40CCC /* LaunchScreen.storyboard */; };
+		0D64D5E327E276A100E40CCC /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64D5E227E276A100E40CCC /* ViewController1.swift */; };
+		0D64D5E527E276F200E40CCC /* SocketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D64D5E427E276F200E40CCC /* SocketIO.swift */; };
+		17383433B8E1B9F501839AB1 /* Pods_WebSocketExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DD823DB304164B9F1A35D8 /* Pods_WebSocketExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		0D64D5D727DFF33400E40CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D64D5DA27DFF33400E40CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D64D5DC27DFF33400E40CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D64D5E227E276A100E40CCC /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		0D64D5E427E276F200E40CCC /* SocketIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIO.swift; sourceTree = "<group>"; };
+		23DD823DB304164B9F1A35D8 /* Pods_WebSocketExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocketExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D1AB8856808952BD9D9699 /* Pods-WebSocketExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketExample.debug.xcconfig"; path = "Target Support Files/Pods-WebSocketExample/Pods-WebSocketExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A910AE78A55151F5AFB63AF6 /* Pods-WebSocketExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketExample.release.xcconfig"; path = "Target Support Files/Pods-WebSocketExample/Pods-WebSocketExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17383433B8E1B9F501839AB1 /* Pods_WebSocketExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1F271C27E2793D00D4F1D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D1F271E27E281EF00D4F1D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D1F271F27E281F700D4F1D2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D1F272027E281FF00D4F1D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0D64D5C227DFF33300E40CCC = {
 			isa = PBXGroup;
 			children = (
 				0D64D5CD27DFF33300E40CCC /* WebSocketExample */,
 				0D64D5CC27DFF33300E40CCC /* Products */,
+				CF6D0B80E3C39B78E6C4229E /* Pods */,
+				86EE5D38CE9270E92645CE1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +95,10 @@
 		0D64D5CD27DFF33300E40CCC /* WebSocketExample */ = {
 			isa = PBXGroup;
 			children = (
+				0D1F272027E281FF00D4F1D2 /* Models */,
+				0D1F271F27E281F700D4F1D2 /* Controllers */,
+				0D1F271E27E281EF00D4F1D2 /* Views */,
+				0D1F271C27E2793D00D4F1D2 /* Resources */,
 				0D64D5CE27DFF33300E40CCC /* AppDelegate.swift */,
 				0D64D5D027DFF33300E40CCC /* SceneDelegate.swift */,
 				0D64D5D227DFF33300E40CCC /* ViewController.swift */,
@@ -63,8 +106,27 @@
 				0D64D5D727DFF33400E40CCC /* Assets.xcassets */,
 				0D64D5D927DFF33400E40CCC /* LaunchScreen.storyboard */,
 				0D64D5DC27DFF33400E40CCC /* Info.plist */,
+				0D64D5E227E276A100E40CCC /* ViewController1.swift */,
+				0D64D5E427E276F200E40CCC /* SocketIO.swift */,
 			);
 			path = WebSocketExample;
+			sourceTree = "<group>";
+		};
+		86EE5D38CE9270E92645CE1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23DD823DB304164B9F1A35D8 /* Pods_WebSocketExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF6D0B80E3C39B78E6C4229E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59D1AB8856808952BD9D9699 /* Pods-WebSocketExample.debug.xcconfig */,
+				A910AE78A55151F5AFB63AF6 /* Pods-WebSocketExample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D64D5DF27DFF33400E40CCC /* Build configuration list for PBXNativeTarget "WebSocketExample" */;
 			buildPhases = (
+				3C74B48EAE6E620BD8F62E67 /* [CP] Check Pods Manifest.lock */,
 				0D64D5C727DFF33300E40CCC /* Sources */,
 				0D64D5C827DFF33300E40CCC /* Frameworks */,
 				0D64D5C927DFF33300E40CCC /* Resources */,
+				175F03EE57C0B421C4197FBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +197,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		175F03EE57C0B421C4197FBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSocketExample/Pods-WebSocketExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSocketExample/Pods-WebSocketExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebSocketExample/Pods-WebSocketExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C74B48EAE6E620BD8F62E67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSocketExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D64D5C727DFF33300E40CCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D64D5E327E276A100E40CCC /* ViewController1.swift in Sources */,
+				0D64D5E527E276F200E40CCC /* SocketIO.swift in Sources */,
 				0D64D5D327DFF33300E40CCC /* ViewController.swift in Sources */,
 				0D64D5CF27DFF33300E40CCC /* AppDelegate.swift in Sources */,
 				0D64D5D127DFF33300E40CCC /* SceneDelegate.swift in Sources */,
@@ -284,6 +392,7 @@
 		};
 		0D64D5E027DFF33400E40CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59D1AB8856808952BD9D9699 /* Pods-WebSocketExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +421,7 @@
 		};
 		0D64D5E127DFF33400E40CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A910AE78A55151F5AFB63AF6 /* Pods-WebSocketExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

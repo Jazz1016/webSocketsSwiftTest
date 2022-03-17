@@ -21,13 +21,12 @@ class ViewController: UIViewController, URLSessionWebSocketDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBlue
         
         let session = URLSession(configuration: .default,
                                  delegate: self,
                                  delegateQueue: OperationQueue())
-        let url = URL(string: "wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self")
+        let url = URL(string: "localhost:3000")
         let webSocket = session.webSocketTask(with: url!)
         webSocket.resume()
         closeButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
